@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C05_Checkboxes {
+public class C05_homework1 {
     //    Go to URL: https://demoqa.com/
      //    Click on Elements.
      //    Click on Checkbox.

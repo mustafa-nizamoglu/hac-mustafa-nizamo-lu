@@ -110,6 +110,7 @@ public class C01_Locators {
         forgotPwd.click();
 
 
+
     }
 
 
@@ -151,11 +152,12 @@ public class C01_Locators {
 
     }
     @Test
-    public void andOrXpath(){
+    public void andOrXpath() throws InterruptedException {
 
         //----//input[@name="session_key"]----
         WebElement email=driver.findElement(By.xpath("//input[@class='input__input' and @name='session_password']"));
         email.sendKeys("mustafa relative xpath gayet basarılı ögrendi");
+        Thread.sleep(3000);
 
 
     }
