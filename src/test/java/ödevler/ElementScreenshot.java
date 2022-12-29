@@ -18,9 +18,8 @@ public class ElementScreenshot extends BaseTest {
 public void getElementScreenshot() throws IOException {
         /*
         Go to URL: https://opensource-demo.orangehrmlive.com/
-        Saving the image to  the path.
-        Getting screenshot of Orange HRM Logo.
-        Getting screenshot of  Orange HRM Page Section
+Getting screenshot of  Orange HRM Page Section.
+Save the screenshot with format 'screenshotname_yyyy_MM_dd_hh_mm_ss.png'
          */
 
     driver.get("https://opensource-demo.orangehrmlive.com/");

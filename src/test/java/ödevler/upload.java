@@ -23,18 +23,13 @@ Upload file.
         //upload edilecek dosya seciyoruz
         WebElement dosyasec=driver.findElement(By.id("file-upload"));
 
-        dosyasec.sendKeys("C:\\Users\\lenovo\\Desktop\\Yeni Microsoft Word Belgesi.docx");
+       String dosyapath="C:\\Users\\lenovo\\Desktop\\Yeni Microsoft Word Belgesi.docx";
 
-        // Upload butonuna basiyoruz
-        WebElement remove=driver.findElement(By.xpath("(//a[@href=\"javascript:void(0)\"][1])"));
-        remove.click();
 
-        // Upload edilme mesajinin goruntulendigini dogruluyoruz
-        WebElement uploadMassage=driver.findElement(By.tagName("h3"));
+        WebElement uploaddosya= driver.findElement(By.xpath("//input[@id='file-upload']"));
+        uploaddosya.sendKeys(dosyapath);
 
-        Assert.assertTrue(uploadMassage.isDisplayed());
 
-        Assert.assertEquals("File Uploaded!" ,uploadMassage.getText());
-
+        Assert.assertTrue(Files.exists(Paths.get(dosyapath)));
     }
 }
